@@ -1,0 +1,38 @@
+@startuml
+
+actor Cliente
+
+package "E-commerce- Santiago" {
+
+  [Inicio]
+  [Ver comidas]
+  [Lista de productos]
+  [Detalle de producto]
+  [Carrito]
+  [Pago]
+  [Confirmación de compra]
+  [Búsqueda]
+  [Error de búsqueda]
+  [Menú]
+
+  Cliente --> [Inicio]
+
+  [Inicio] --> [Ver comidas]
+  [Ver comidas] --> [Lista de productos]
+
+  [Lista de productos] --> [Detalle de producto]
+  [Detalle de producto] --> [Carrito]
+
+  [Carrito] --> [Pago]
+  [Pago] --> [Confirmación de compra]
+
+  [Lista de productos] --> [Búsqueda]
+  [Búsqueda] --> [Error de búsqueda]
+
+  [Inicio] --> [Menú]
+  [Lista de productos] --> [Menú]
+  [Detalle de producto] --> [Menú]
+
+}
+
+@enduml
